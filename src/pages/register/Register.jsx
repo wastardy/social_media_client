@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './register.scss';
 
 const Register = () => {
@@ -7,14 +8,16 @@ const Register = () => {
                 
                 {/* Left Side */}
                 <div className="left">
-                    <h1>Welcome to Connectify!</h1>
+                    <h1>Connectify Media</h1>
                     <p>
                         Connectify is the place where people come together, 
                         share life moments, and stay connected with friends. 
                         Join us to be part of something amazing!
                     </p>
                     <span>Do you have an account?</span>
+                    <Link to="/login">
                     <button>Login</button>
+                    </Link>    
                 </div>
 
                 {/* Right Side */}
