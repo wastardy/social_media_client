@@ -1,3 +1,32 @@
 .rightBar {
     flex: 3;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
+
+// Custom Scroll
+// .rightBar::-webkit-scrollbar {
+//     width: 7px;
+// }
+
+// .rightBar::-webkit-scrollbar-thumb {
+//     background: #888;
+//     border-radius: 10px;
+//     margin: 10px 0px;
+// }
+
+// .rightBar::-webkit-scrollbar-thumb:hover {
+//     background: linear-gradient(180deg, #727272, #555);
+// }
+
+// .rightBar::-webkit-scrollbar-track {
+//     background: #e0e0e0;
+// }
