@@ -6,6 +6,8 @@ import Register from './pages/register/Register.jsx';
 import Home from './pages/home/Home.jsx';
 import Profile from './pages/profile/Profile.jsx';
 import './style.scss';
+import { useContext } from 'react';
+import { DarkModeContext } from './context/darkmodeContext.jsx';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -18,9 +20,13 @@ function App() {
 
     const currentUser = true;
 
+    const { darkMode } = useContext(DarkModeContext);
+
+    // console.log(darkMode);
+
     const Layout = () => {
         return (
-            <div className="theme-dark">
+            <div className={`theme-${darkMode ? 'dark' : 'light'}`}>
                 <Navbar/>
                 <div style={{display:"flex"}}>
                     <LeftBar/>
