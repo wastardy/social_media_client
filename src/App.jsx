@@ -8,6 +8,7 @@ import Profile from './pages/profile/Profile.jsx';
 import './style.scss';
 import { useContext } from 'react';
 import { DarkModeContext } from './context/darkmodeContext.jsx';
+import { AuthContext } from './context/authContext.jsx';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -18,7 +19,7 @@ import {
 
 function App() {
 
-    const currentUser = true;
+    const { currentUser } = useContext(AuthContext);
 
     const { darkMode } = useContext(DarkModeContext);
 

@@ -9,6 +9,11 @@ export const AuthContextProvider = ({children}) => {
 
     const login = () => {
         // TO DO
+        setCurrentUser({
+            id: 1, 
+            name: "Tony Stark", 
+            profile_picture: "https://eyemartnepal.com/wp-content/uploads/2019/05/Screenshot_20200303-215853__01.jpg", 
+        });
     };
 
     useEffect(() => {
@@ -16,7 +21,7 @@ export const AuthContextProvider = ({children}) => {
     }, [currentUser]);
 
     return(
-        <AuthContext.Provider value={{  }}>
+        <AuthContext.Provider value={{ currentUser, login }}>
             {children}
         </AuthContext.Provider>
     );

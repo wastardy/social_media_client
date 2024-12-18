@@ -12,15 +12,20 @@ import Messages from "../../assets/10.png";
 import Fund from "../../assets/13.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
+import { useContext } from 'react';
+import { AuthContext } from '../../context/authContext';
 
 const LeftBar = () => {
+
+    const { currentUser } = useContext(AuthContext);
+
     return (
         <div className='leftBar'>
             <div className="container">
                 <div className="menu">
                     <div className="user">
-                        <img src="https://eyemartnepal.com/wp-content/uploads/2019/05/Screenshot_20200303-215853__01.jpg" alt="Tony Stark image" />
-                        <span>Tony Stark</span>
+                        <img src={currentUser.profile_picture} alt="Tony Stark image" />
+                        <span>{currentUser.name}</span>
                     </div>
                     <div className="item">
                         <img src={Friends} alt="" />

@@ -10,10 +10,12 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { DarkModeContext } from '../../context/darkmodeContext';
+import { AuthContext } from '../../context/authContext';
 
 const Navbar = () => {
 
     const { toggle, darkMode } = useContext(DarkModeContext);
+    const { currentUser } = useContext(AuthContext);
 
     return(
         <div className='navbar'>
@@ -42,8 +44,8 @@ const Navbar = () => {
                 <EmailOutlinedIcon/>
                 <NotificationsOutlinedIcon/>
                 <div className="user">
-                    <img src="https://eyemartnepal.com/wp-content/uploads/2019/05/Screenshot_20200303-215853__01.jpg" alt="Tony Stark image" />
-                    <span>Tony Stark</span>
+                    <img src={currentUser.profile_picture} alt="Tony Stark image" />
+                    <span>{currentUser.name}</span>
                 </div>
             </div>
         </div>
