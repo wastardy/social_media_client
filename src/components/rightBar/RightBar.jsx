@@ -36,7 +36,9 @@ const RightBar = () => {
                                 <span>stephencurry30</span> change his cover picture
                             </p>
                         </div>
-                        <span>1 min ago</span>
+                        <div className="time" style={{fontSize: "14px"}}>
+                            1 min ago
+                        </div>
                     </div>
                     <div className="user">
                         <div className="userInfo">
@@ -47,7 +49,9 @@ const RightBar = () => {
                                 <span> champagnepapi</span> 
                             </p>
                         </div>
-                        <span>7 mins ago</span>
+                        <div className="time" style={{fontSize: "14px"}}>
+                            7 mins ago
+                        </div>
                     </div>
                     <div className="user">
                         <div className="userInfo">
@@ -56,7 +60,9 @@ const RightBar = () => {
                                 <span>future</span> post new video
                             </p>
                         </div>
-                        <span>18 mins ago</span>
+                        <div className="time" style={{fontSize: "14px"}}>
+                            18 mins ago
+                        </div>
                     </div>
                     <div className="user">
                         <div className="userInfo">
@@ -67,11 +73,13 @@ const RightBar = () => {
                                 <span> kendricklamar</span>
                             </p>
                         </div>
-                        <span>32 mins ago</span>
+                        <div className="time" style={{fontSize: "14px"}}>
+                            32 mins ago
+                        </div>
                     </div>
                 </div>
                 <div className="item">
-                    <span>Online Friends</span>
+                    <span>Your Friends</span>
                     <div className="user">
                         <div className="userInfo">
                             <img src="src/assets/steph_curry.jpg" alt="" />
@@ -95,8 +103,15 @@ const RightBar = () => {
                     </div>
                     <div className="user">
                         <div className="userInfo">
-                            <img src="src/assets/kendrick_lamar.jpeg" alt="" />
+                            <img src="src/assets/ryan_holiday.jpg" alt="" />
                             <div className="online"></div>
+                            <span>ryanholiday</span>
+                        </div>
+                    </div>
+                    <div className="user">
+                        <div className="userInfo">
+                            <img src="src/assets/kendrick_lamar.jpeg" alt="" />
+                            <div className="offline"></div>
                             <span>kendricklamar</span> 
                         </div>
                     </div>
