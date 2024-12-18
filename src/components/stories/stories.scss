@@ -1,0 +1,46 @@
+.stories {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    gap: 10px;
+    height: 200px;
+    margin-bottom: -30px;
+    
+    .story {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        span {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        button {
+            position: absolute;
+            bottom: 35px;
+            left: 10px;
+            color: #fff;
+            background-color: #5271ff;
+            border: none;
+            border-radius: 50px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

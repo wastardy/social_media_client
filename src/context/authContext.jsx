@@ -11,7 +11,7 @@ export const AuthContextProvider = ({children}) => {
         // TO DO
         setCurrentUser({
             id: 1, 
-            name: "Tony Stark", 
+            name: "Robert Downey Jr.", 
             profile_picture: "https://eyemartnepal.com/wp-content/uploads/2019/05/Screenshot_20200303-215853__01.jpg", 
         });
     };
