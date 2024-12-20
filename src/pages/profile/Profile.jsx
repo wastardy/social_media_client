@@ -13,8 +13,47 @@ const Profile = () => {
     return (
         <div className='profile'>
             <div className="images">
-                <img src="" alt="" className="cover" />
-                <img src="" alt="" className="profile" />
+                <img src="../src/assets/drake_bg_2.jpg" alt="" className="cover" />
+                <img src="../src/assets/drake.jpg" alt="" className="profile" />
+            </div>
+            <div className="profileContainer">
+                <div className="userInfo">
+                    <div className="left">
+                        <a href="http://facebook.com">
+                            <FacebookTwoToneIcon fontSize="large"/>
+                        </a>
+                        <a href="http://instagram.com">
+                            <InstagramIcon fontSize="large"/>
+                        </a>
+                        <a href="http://x.com">
+                            <TwitterIcon fontSize="large"/>
+                        </a>
+                        <a href="http://linkedin.com">
+                            <LinkedInIcon fontSize="large"/>
+                        </a>
+                        <a href="http://pinterest.com">
+                            <PinterestIcon fontSize="large"/>
+                        </a>
+                    </div>
+                    <div className="center">
+                        <span>champagnepapi</span>
+                        <div className="info">
+                            <div className="item">
+                                <PlaceIcon/>
+                                <span>Kanada, Toronto</span>
+                            </div>
+                            <div className="item">
+                                <LanguageIcon/>
+                                <span>Nocta</span>
+                            </div>
+                        </div>
+                        <button>follow</button>
+                    </div>
+                    <div className="right">
+                        <EmailOutlinedIcon/>
+                        <MoreVertIcon/>
+                    </div>
+                </div>
             </div>
         </div>
     )
