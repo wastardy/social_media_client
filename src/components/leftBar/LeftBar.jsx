@@ -15,7 +15,21 @@ import Courses from "../../assets/12.png";
 import { useContext } from 'react';
 import { AuthContext } from '../../context/authContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserFriends, faUsers, faStore, faTv, faClock, faCalendarAlt, faGamepad, faImage, faVideo, faEnvelope, faHandHoldingUsd, faBook, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { 
+    faUserFriends, 
+    faUsers, 
+    faStore, 
+    faTv, 
+    faClock, 
+    faCalendarAlt, 
+    faGamepad, 
+    faImage, 
+    faVideo, 
+    faEnvelope, 
+    faHandHoldingUsd, 
+    faBook, 
+    faGraduationCap 
+} from '@fortawesome/free-solid-svg-icons';
 
 
 const LeftBar = () => {
@@ -31,23 +45,27 @@ const LeftBar = () => {
                         <span>{currentUser.name}</span>
                     </div>
                     <div className="item">
-                        <FontAwesomeIcon icon={faUserFriends} />
+                        <FontAwesomeIcon icon={faUserFriends} className="fa-icon"/>
                         <span>Friends</span>
                     </div>
                     <div className="item">
-                        <img src={Groups} alt="" />
+                        {/* <img src={Groups} alt="" /> */}
+                        <FontAwesomeIcon icon={faUsers} className="fa-icon"/>
                         <span>Groups</span>
                     </div>
                     <div className="item">
-                        <img src={Market} alt="" />
+                        {/* <img src={Market} alt="" /> */}
+                        <FontAwesomeIcon icon={faStore} className="fa-icon" />
                         <span>Marketplace</span>
                     </div>
                     <div className="item">
-                        <img src={Watch} alt="" />
+                        {/* <img src={Watch} alt="" /> */}
+                        <FontAwesomeIcon icon={faTv} className="fa-icon"/>
                         <span>Watch</span>
                     </div>
                     <div className="item">
-                        <img src={Memories} alt="" />
+                        {/* <img src={Memories} alt="" /> */}
+                        <FontAwesomeIcon icon={faClock} className="fa-icon"/>
                         <span>Memories</span>
                     </div>
                 </div>
@@ -55,23 +73,28 @@ const LeftBar = () => {
                 <div className="menu">
                     <span>Your shortcuts</span>
                     <div className="item">
-                        <img src={Events} alt="" />
+                        {/* <img src={Events} alt="" /> */}
+                        <FontAwesomeIcon icon={faCalendarAlt} className="fa-icon"/>
                         <span>Events</span>
                     </div>
                     <div className="item">
-                        <img src={Gaming} alt="" />
+                        {/* <img src={Gaming} alt="" /> */}
+                        <FontAwesomeIcon icon={faGamepad} className="fa-icon"/>
                         <span>Gaming</span>
                     </div>
                     <div className="item">
-                        <img src={Gallery} alt="" />
+                        {/* <img src={Gallery} alt="" /> */}
+                        <FontAwesomeIcon icon={faImage} className="fa-icon"/>
                         <span>Gallery</span>
                     </div>
                     <div className="item">
-                        <img src={Videos} alt="" />
+                        {/* <img src={Videos} alt="" /> */}
+                        <FontAwesomeIcon icon={faVideo} className="fa-icon"/>
                         <span>Videos</span>
                     </div>
                     <div className="item">
-                        <img src={Messages} alt="" />
+                        {/* <img src={Messages} alt="" /> */}
+                        <FontAwesomeIcon icon={faEnvelope} className="fa-icon"/>
                         <span>Messages</span>
                     </div>
                 </div>
@@ -79,15 +102,18 @@ const LeftBar = () => {
                 <div className="menu">
                     <span>Others</span>
                     <div className="item">
-                        <img src={Fund} alt="" />
+                        {/* <img src={Fund} alt="" /> */}
+                        <FontAwesomeIcon icon={faHandHoldingUsd} className="fa-icon"/>
                         <span>Fundraiser</span>
                     </div>
                     <div className="item">
-                        <img src={Tutorials} alt="" />
+                        {/* <img src={Tutorials} alt="" /> */}
+                        <FontAwesomeIcon icon={faBook} className="fa-icon"/>
                         <span>Tutorials</span>
                     </div>
                     <div className="item">
-                        <img src={Courses} alt="" />
+                        {/* <img src={Courses} alt="" /> */}
+                        <FontAwesomeIcon icon={faGraduationCap} className="fa-icon"/>
                         <span>Courses</span>
                     </div>
                 </div>

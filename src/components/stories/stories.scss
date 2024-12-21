@@ -1,15 +1,34 @@
+@import '../../style.scss';
+
 .stories {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     display: flex;
     gap: 10px;
     height: 200px;
     margin-bottom: 30px;
+
+    @include mobile {
+        height: 50px;
+        justify-content: space-between;
+    }
+
+    @include tablet {
+        height: 180px;
+        gap: 14px;
+    }
     
     .story {
         flex: 1;
         border-radius: 10px;
         overflow: hidden;
         position: relative;
+
+        @include mobile {
+            flex: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
 
         img {
             width: 100%;
@@ -24,6 +43,10 @@
             color: #fff;
             font-size: 12px;
             font-weight: 500;
+
+            @include mobile {
+                display: none;
+            }
         }
 
         button {
@@ -41,6 +64,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include mobile {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
         }
     }
 }

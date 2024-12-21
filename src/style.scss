@@ -17,6 +17,10 @@ $themes: (
     ),
 );
 
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
 @mixin themify($themes) {
     @each $theme, $map in $themes {
         .theme-#{$theme} & {
@@ -34,10 +38,6 @@ $themes: (
             $theme-map: null !global;
         }
     }
-}
-
-@function themed($key) {
-    @return map-get($theme-map, $key);
 }
   
 @mixin mobile {

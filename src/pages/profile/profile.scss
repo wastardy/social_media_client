@@ -59,11 +59,22 @@
                 align-items: center;
                 justify-content: space-between;
 
+                @include mobile {
+                    flex-direction: column;
+                    height: auto;
+                    margin-top: 110px;
+                    padding: 50px;
+                }
+
                 .left {
                     flex: 1;
                     display: flex;
                     align-items: center;
                     gap: 10px;
+
+                    @include mobile {
+                        margin-top: -20px;
+                    }
 
                     a {
                         color: themed("textColor");
@@ -77,6 +88,11 @@
                     align-items: center;
                     margin-top: 40px;
                     gap: 10px;
+
+                    @include mobile {
+                        margin-top: 20px;
+                        flex-grow: 1;
+                    }
                     
                     span {
                         font-size: 22px;
@@ -88,6 +104,12 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-around;
+
+                        @include mobile {
+                            margin-top: 0px;
+                            justify-content: center;
+                            gap: 30px;
+                        }
 
                         .item {
                             display: flex;
@@ -103,6 +125,10 @@
 
                     .button {
                         margin-top: 30px;
+
+                        @include mobile {
+                            margin-top: 30px;
+                        }
 
                         button {
                             border: none;
@@ -122,6 +148,10 @@
                     align-items: center;
                     justify-content: flex-end;
                     gap: 10px;
+
+                    @include mobile {
+                        margin-top: 20px;
+                    }
                 }
             }
         }
