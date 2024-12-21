@@ -14,6 +14,9 @@ import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import { useContext } from 'react';
 import { AuthContext } from '../../context/authContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserFriends, faUsers, faStore, faTv, faClock, faCalendarAlt, faGamepad, faImage, faVideo, faEnvelope, faHandHoldingUsd, faBook, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+
 
 const LeftBar = () => {
 
@@ -28,7 +31,7 @@ const LeftBar = () => {
                         <span>{currentUser.name}</span>
                     </div>
                     <div className="item">
-                        <img src={Friends} alt="" />
+                        <FontAwesomeIcon icon={faUserFriends} />
                         <span>Friends</span>
                     </div>
                     <div className="item">

@@ -45,7 +45,9 @@ const Profile = () => {
                                 <span>Nocta</span>
                             </div>
                         </div>
-                        <button>follow</button>
+                        <div className="button">
+                            <button>follow</button>
+                        </div>
                     </div>
                     <div className="right">
                         <EmailOutlinedIcon/>

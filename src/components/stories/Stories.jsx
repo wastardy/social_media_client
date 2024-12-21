@@ -10,22 +10,22 @@ const Stories = () => {
         {
             id: 1,
             name: "stephencurry30",
-            img: "./src/assets/steph_story.jpg",
+            img: "../src/assets/steph_story.jpg",
         },
         {
             id: 2,
             name: "cillianmurphyofficiall",
-            img: "./src/assets/cillian_story.jpg",
+            img: "../src/assets/cillian_story.jpg",
         },
         {
             id: 3,
             name: "champagnepapi",
-            img: "./src/assets/drake_story.jpg",
+            img: "../src/assets/drake_story.jpg",
         },
         {
             id: 4,
             name: "future",
-            img: "./src/assets/future_story.png",
+            img: "../src/assets/future_story.png",
         },
     ];
 
