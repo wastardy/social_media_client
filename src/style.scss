@@ -21,6 +21,10 @@ $themes: (
     @return map-get($theme-map, $key);
 }
 
+// @function themed($theme, $key) {
+//     @return map-get(map-get($themes, $theme), $key);
+// }
+
 @mixin themify($themes) {
     @each $theme, $map in $themes {
         .theme-#{$theme} & {
