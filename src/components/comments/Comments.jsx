@@ -12,7 +12,7 @@ const Comments = () => {
             desc: "Legendary vibes only 🏆",
             name: "future",
             userId: 1,
-            profilePicture: "./src/assets/future.jpg",
+            profilePicture: "../src/assets/future.jpg",
         },
         {
             id: 2,

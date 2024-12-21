@@ -19,7 +19,7 @@ const Post = ({post}) => {
         <div className="post">
             <div className="container">
                 <div className="user">
-                    <div className="userInfo">
+                    <div className="uInfo">
                         <img src={post.profilePic} alt="" />
                         <div className="details">
                             <Link to={`/profile/${post.userId}`} style={{textDecoration:"none", color:"inherit"}}>
