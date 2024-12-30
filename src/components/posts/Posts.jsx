@@ -1,8 +1,20 @@
 import './posts.scss';
 import Post from '../../components/post/Post';
+import { useQuery } from 'react-query'
+import { makeRequest } from '../../axios';
+
 
 const Posts = () => {
 
+    const { isLoading, error, data } = useQuery(['posts'], () => 
+        makeRequest.get('/posts').then(res => {
+            return res.data;
+        })
+    );
+
+    console.log(data);
+
+    /* temp posts
     const posts = [
         {
             id: 1,
@@ -28,12 +40,16 @@ const Posts = () => {
             img: "../src/assets/cillian_murphy_post.jpg",
         },
     ];
+    */
 
     return (
         <div className="posts">
-            {posts.map(post => (
-                <Post post={post} key={post.id}/>
-            ))}
+            {error 
+                ? '---> smth went wrong at Posts.jsx' 
+                : (isLoading ? 'loading' : data.map(post => (
+                    <Post post={post} key={post.id}/>
+                )))
+            }
         </div>
     );
 }

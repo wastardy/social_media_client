@@ -9,6 +9,7 @@ import './style.scss';
 import { useContext } from 'react';
 import { DarkModeContext } from './context/darkmodeContext.jsx';
 import { AuthContext } from './context/authContext.jsx';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -23,20 +24,24 @@ function App() {
 
     const { darkMode } = useContext(DarkModeContext);
 
+    const queryClient = new QueryClient()
+
     // console.log(darkMode);
 
     const Layout = () => {
         return (
-            <div className={`theme-${darkMode ? 'dark' : 'light'}`}>
-                <Navbar/>
-                <div style={{display:"flex"}}>
-                    <LeftBar/>
-                    <div style={{flex: 6}}>
-                        <Outlet/>
+            <QueryClientProvider client={queryClient}>
+                <div className={`theme-${darkMode ? 'dark' : 'light'}`}>
+                    <Navbar/>
+                    <div style={{display:"flex"}}>
+                        <LeftBar/>
+                        <div style={{flex: 6}}>
+                            <Outlet/>
+                        </div>
+                        <RightBar/>
                     </div>
-                    <RightBar/>
                 </div>
-            </div>
+            </QueryClientProvider>
         );
     };
 
