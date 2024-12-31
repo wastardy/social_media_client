@@ -10,27 +10,28 @@ const Share = () => {
     const [file, setFile] = useState(null);
     const [desc, setDesc] = useState("");
 
+    const { currentUser } = useContext(AuthContext);
+
+    const queryClient = useQueryClient();
+
     const upload = async () => {
         try {
             const formData = new FormData();
 
-            formData.append("file", file);
+            formData.append('file', file);
 
             const res = await makeRequest.post("/upload", formData);
 
             return res.data;
         } 
-        catch (err) {
-            console.log(err);
+        catch (error) {
+            console.log(error.message);
         }
     };
 
-    const { currentUser } = useContext(AuthContext);
-
-    const queryClient = useQueryClient();
-
     const mutation = useMutation(
-        (newPost) => {
+        (newPost) => 
+        {
             return makeRequest.post("/posts", newPost);
         },
         {
@@ -44,10 +45,14 @@ const Share = () => {
     const handleClick = async (event) => {
         event.preventDefault();
 
-        let imgUrl = "";
+        let imgUrl = '';
         
-        if (file) imgUrl = await upload();
+        if (file) {
+            imgUrl = await upload();
+        }
+
         mutation.mutate({ desc, img: imgUrl });
+        
         setDesc("");
         setFile(null);
     };
@@ -57,7 +62,7 @@ const Share = () => {
             <div className="container">
                 <div className="top">
                     <div className="left">
-                        <img src={currentUser.profile_picture} alt="" />
+                        <img src={currentUser.profile_picture} alt="profile image" />
                         <input
                             type="text"
                             placeholder={`Any news to share, ${currentUser.name}?`}
@@ -67,7 +72,10 @@ const Share = () => {
                     </div>
                     <div className="right">
                         {file && (
-                            <img className="file" alt="" src={URL.createObjectURL(file)} />
+                            <img 
+                                className="file" 
+                                alt="uploading image" 
+                                src={URL.createObjectURL(file)} />
                         )}
                     </div>
                 </div>
