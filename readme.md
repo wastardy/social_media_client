@@ -4,6 +4,10 @@
 > React social media app design, dark / light modes & responsive design
 
 ## 1.1. PC home page
+<img src="./src/appearance/posting_likes_and_comments.png"/>
+
+> -
+
 <img src="./src/appearance/pc_version.png"/>
 
 ## 1.2. PC profile + dark mode
