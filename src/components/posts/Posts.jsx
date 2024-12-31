@@ -12,8 +12,6 @@ const Posts = () => {
         })
     );
 
-    console.log(data);
-
     /* temp posts
     const posts = [
         {
