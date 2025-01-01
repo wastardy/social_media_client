@@ -55,3 +55,9 @@ $themes: (
         @content;
     }
 }
+
+@mixin small-laptop {
+    @media (max-width: 1160px) {
+        @content;
+    }
+}
