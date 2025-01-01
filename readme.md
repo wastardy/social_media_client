@@ -3,17 +3,33 @@
 
 > React social media app design, dark / light modes & responsive design
 
-## 1.1. PC home page
-<img src="./src/appearance/posting_likes_and_comments.png"/>
+## 1.1. Registration & Login
+<img src="./src/appearance/register.png"/>
 
 > -
 
-<img src="./src/appearance/pc_version.png"/>
+<img src="./src/appearance/login.png"/>
 
-## 1.2. PC profile + dark mode
+## 1.2. PC home page
+<img src="./src/appearance/posting_likes_and_comments.png"/>
+
+<!-- > -
+
+<img src="./src/appearance/pc_version.png"/> -->
+
+## 1.3. PC profile + update profile + dark mode
 <img src="./src/appearance/pc_profile.png"/>
 
-## 2.1. iPad profile + comments section
+> dark mode update profile
+
+<img src="./src/appearance/update_profile_darkmode.png"/>
+
+> light mode update profile
+
+<img src="./src/appearance/update_profile_lightmode.png"/>
+
+
+## 2.1. iPad profile + delete post button
 <img src="./src/appearance/ipad_version.png"/>
 
 ## 3.1. mobile
