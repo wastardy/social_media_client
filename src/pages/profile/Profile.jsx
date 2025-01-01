@@ -9,13 +9,26 @@ import LanguageIcon from "@mui/icons-material/Language";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Posts from '../../components/posts/Posts'
+import { useMutation, useQuery, useQueryClient } from 'react-query';
+import { makeRequest } from '../../axios';
+import { useLocation } from 'react-router-dom';
 
 const Profile = () => {
+    const userId = useLocation().pathname.split('/')[2];
+
+    const { isLoading, error, data = []} = useQuery(['user'], () => 
+        makeRequest.get('/users/find/' + userId).then(res => {
+            return res.data;
+        })
+    );
+
+    console.log(data);
+
     return (
         <div className='profile'>
             <div className="images">
-                <img src="../src/assets/drake_bg_2.jpg" alt="" className="cover" />
-                <img src="../src/assets/drake.jpg" alt="" className="profile" />
+                <img src={data.cover_picture} alt="" className="cover" />
+                <img src={data.profile_picture} alt="" className="profile" />
             </div>
             <div className="profileContainer">
                 <div className="userInfo">
@@ -34,15 +47,15 @@ const Profile = () => {
                         </a>
                     </div>
                     <div className="center">
-                        <span>champagnepapi</span>
+                        <span>{data.name}</span>
                         <div className="info">
                             <div className="item">
                                 <PlaceIcon/>
-                                <span>Kanada, Toronto</span>
+                                <span>{data.city}</span>
                             </div>
                             <div className="item">
                                 <LanguageIcon/>
-                                <span>Nocta</span>
+                                <span>{data.website}</span>
                             </div>
                         </div>
                         <div className="button">
