@@ -18,6 +18,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                position: relative;
 
                 .uInfo {
                     display: flex;
@@ -44,6 +45,19 @@
                             font-size: 12px;
                         }
                     }
+                }
+
+                button {
+                    position: absolute;
+                    top: 40px;
+                    right: 0px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #ff3a3ad4;
+                    color: #fff;
+                    padding: 8px 16px;
+                    font-size: 16px;
+                    cursor: pointer;
                 }
             }
 
